@@ -1,0 +1,126 @@
+<div class="swiper">
+  <div class="customSlider-{{ block.id }}{{ section.id }}">
+    <div class="swiper-wrapper">
+      {% content_for 'blocks' %}
+    </div>
+    {% if block.settings.arrow_design == "navigation" %}
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    {% elsif block.settings.arrow_design == "pagination" %}
+      <div class="swiper-pagination"></div>
+    {% else %}
+      
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .customSlider-{{ block.id }}{{ section.id }}{
+    width: 100%;
+    height: 100%;
+  }
+  .swiper *:empty{
+    display: flex;
+  }
+  .swiper {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    @media(max-width: 750px){
+      aspect-ratio: 8/10;
+    }
+  }
+  .customSlider-{{ block.id }}{{ section.id }} .swiper-button-next:after, 
+  .customSlider-{{ block.id }}{{ section.id }} .swiper-button-prev:after {
+    font-size: 30px;
+    color: var(--color-foreground);
+  }
+  .customSlider-{{ block.id }}{{ section.id }} .swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 30px;
+  }   
+  .customSlider-{{ block.id }}{{ section.id }} span.swiper-pagination-bullet {
+    border-radius: 0;
+    width: 30px;
+    height: 5px;
+  }
+  .customSlider-{{ block.id }}{{ section.id }} .swiper-pagination-bullet{
+    background-color: var(--color-primary-button-text);
+  }
+  .customSlider-{{ block.id }}{{ section.id }} .swiper-pagination-bullet-active{
+    background-color: var(--color-primary-button-background);
+  }
+  
+</style>
+
+<script>
+  var swiper = new Swiper(".customSlider-{{ block.id }}{{ section.id }}", {
+    slidesPerView: 1,
+    spaceBetween: 0,      
+    centeredSlides: true,
+    speed: 1500,
+    loop: true,
+    grabCursor: true,
+    effect: "slide",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Custom Slider",
+    "tag": null,
+    "settings": [
+      {
+        "type": "select",
+        "id": "arrow_design",
+        "label": "Arrow Design",
+        "default": "navigation",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "navigation",
+            "label": "Navigation"
+          },
+          {
+            "value": "pagination",
+            "label": "Pagination"
+          }
+        ]
+      }
+    ],
+    "blocks": [{"type": "_single_slider"}],
+    "presets": [{"name": "Custom Slider"}]
+  }
+{% endschema %}

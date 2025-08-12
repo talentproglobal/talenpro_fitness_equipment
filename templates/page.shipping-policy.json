@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_4BM8FA": {
+      "type": "section",
+      "blocks": {
+        "text_6qYJHJ": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>{{ closest.page.title }}</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_Acdi46": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Welcome to Talentpro Beauty! The terms “we”, “us” and “our” refer to Talentpro Beauty.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_6qYJHJ",
+        "text_Acdi46"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 50,
+        "padding-block-end": 50
+      }
+    },
+    "section_LJ8mLm": {
+      "type": "section",
+      "blocks": {
+        "group_PMbcUn": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_overflow": "position_normal",
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 100,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_7ijV4D": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Welcome to Shopowave! The terms \"we\", \"us\" and \"our\" refer to Shopowave.</p><p>Shopowave operates this store and website, including all related information, content, features, tools, products, and services in order to provide you, the customer, with a curated shopping experience (the \"Services\"). Shopowave is powered by Shopify, which enables us to provide the Services to you.</p><p>The terms and conditions below, together with any policies referenced herein (these \"Terms of Service\" or \"Terms\"), describe your rights and responsibilities when using the Services.</p><p>By visiting or using our Services, you agree to be bound by these Terms of Service and our Privacy Policy [LINK]. If you do not agree, please do not access or use our Services.</p><p><strong>SECTION 1 - ACCESS AND ACCOUNT<br/></strong> By agreeing to these Terms, you represent that you are at least the age of majority in your state or province of residence, and you consent to allow any minor dependents to use the Services under your supervision.</p><p>You may be required to provide personal and payment information to use our Services. You are responsible for maintaining the confidentiality of your account and all activities under your account.</p><p><strong>SECTION 2 - OUR PRODUCTS<br/></strong> We strive to provide accurate product descriptions and images. However, product appearance may vary slightly due to device settings or screen differences. All product descriptions, pricing, and availability are subject to change without notice.</p><p><strong>SECTION 3 - ORDERS<br/></strong> By placing an order, you are making an offer to purchase. Orders are not accepted until confirmed by Shopowave. We reserve the right to cancel or modify orders and will attempt to notify you using your contact information. All purchases are subject to our Refund Policy [LINK].</p><p><strong>SECTION 4 - PRICES AND BILLING<br/></strong> Prices may change at any time. Posted prices do not include taxes or shipping unless stated otherwise. Promotions may be governed by separate terms. You agree to provide accurate billing and payment information and are responsible for all charges incurred.</p><p><strong>SECTION 5 - SHIPPING AND DELIVERY<br/></strong> Delivery times are estimates and not guaranteed. We are not responsible for delays caused by carriers, customs, or external events. Title and risk pass to you upon shipment.</p><p><strong>SECTION 6 - INTELLECTUAL PROPERTY<br/></strong> All content and branding on the Services belong to Shopowave or its licensors. You may not copy, distribute, or use any part of our Services without express written consent.</p><p><strong>SECTION 7 - OPTIONAL TOOLS<br/></strong> We may provide access to third-party tools without monitoring or control. Use these tools at your own risk.</p><p><strong>SECTION 8 - THIRD-PARTY LINKS<br/></strong> Our Services may contain links to third-party websites. We are not responsible for the content or practices of any third-party sites. Please review their policies before engaging.</p><p><strong>SECTION 9 - RELATIONSHIP WITH SHOPIFY<br/></strong> Shopowave is powered by Shopify. Shopify is not responsible for transactions made on our store. By using our Services, you release Shopify from any claims related to your purchases.</p><p><strong>SECTION 10 - PRIVACY POLICY<br/></strong> Personal information is collected in accordance with our Privacy Policy [LINK] and Shopify’s Privacy Policy [LINK]. By using our Services, you consent to this information handling.</p><p><strong>SECTION 11 - FEEDBACK<br/></strong> By submitting feedback, you grant us the right to use it in any way. You confirm that your feedback is accurate and that you have the right to share it.</p><p><strong>SECTION 12 - ERRORS AND OMISSIONS<br/></strong> We reserve the right to correct any errors or omissions on our Services and to cancel or modify orders affected by such errors.</p><p><strong>SECTION 13 - PROHIBITED USES<br/></strong> You agree not to use our Services for any unlawful or prohibited purpose. Violations may result in termination of your access.</p><p><strong>SECTION 14 - TERMINATION<br/></strong> We may terminate access to our Services at any time. Provisions such as Intellectual Property, Feedback, Limitation of Liability, and Governing Law will survive termination.</p><p><strong>SECTION 15 - DISCLAIMER OF WARRANTIES<br/></strong> Our Services and all products are provided \"as is\" without warranties of any kind. Use of the Services is at your own risk.</p><p><strong>SECTION 16 - LIMITATION OF LIABILITY<br/></strong> Shopowave and its affiliates will not be liable for any damages arising from your use of the Services, including direct, indirect, incidental, or consequential damages.</p><p><strong>SECTION 17 - INDEMNIFICATION<br/></strong> You agree to indemnify and hold Shopowave harmless from any claims arising from your use of the Services or violation of these Terms.</p><p><strong>SECTION 18 - SEVERABILITY<br/></strong> If any provision of these Terms is found unenforceable, the remaining provisions will remain in effect.</p><p><strong>SECTION 19 - WAIVER; ENTIRE AGREEMENT<br/></strong> These Terms, along with our Privacy Policy, constitute the entire agreement between you and Shopowave.</p><p><strong>SECTION 20 - ASSIGNMENT<br/></strong> You may not assign your rights under these Terms. Shopowave may assign or delegate these Terms without restriction.</p><p><strong>SECTION 21 - GOVERNING LAW<br/></strong> These Terms are governed by the laws of the State of California. You agree to submit to the jurisdiction of the courts located in California.</p><p><strong>SECTION 22 - HEADINGS<br/></strong> Headings are for convenience only and do not affect the meaning of these Terms.</p><p><strong>SECTION 23 - CHANGES TO TERMS<br/></strong> We reserve the right to update or modify these Terms. Continued use of our Services constitutes acceptance of any changes.</p><p><strong>SECTION 24 - CONTACT INFORMATION<br/></strong> Questions? Reach out to us at support@shopowave.com.</p><p><strong>Shopowave<br/></strong> support@shopowave.com<br/> 3245 Abbot Kinney Blvd, Suite 500, Venice, CA 90291<br/> 12476 East Houston Street, New York, NY 10002<br/> Mobile: (310) 555-9012<br/> Hotline: 1-800-936-8243</p><p><strong>Hours of Operation:</strong> Mon – Fri: 08:30 – 22:00 Sat & Sun: 09:30 – 22:00<br/><br/></p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_7ijV4D"
+          ]
+        }
+      },
+      "block_order": [
+        "group_PMbcUn"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 25,
+        "padding-block-end": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_4BM8FA",
+    "section_LJ8mLm"
+  ]
+}

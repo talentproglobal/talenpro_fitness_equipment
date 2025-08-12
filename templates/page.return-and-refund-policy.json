@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_4BM8FA": {
+      "type": "section",
+      "blocks": {
+        "text_6qYJHJ": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>{{ closest.page.title }}</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_Acdi46": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_6qYJHJ",
+        "text_Acdi46"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 50,
+        "padding-block-end": 50
+      }
+    },
+    "section_LJ8mLm": {
+      "type": "section",
+      "blocks": {
+        "group_PMbcUn": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_overflow": "position_normal",
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 100,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_7ijV4D": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Thank you for shopping with <strong>Shopowave</strong>. We want you to be completely satisfied with your purchase. If you need to return or exchange an item, please review our policy below.</p><h4>Eligibility for Returns</h4><p>To be eligible for a return, your item must:</p><ul><li>Be in the same condition as when you received it</li><li>Be unopened or unused, with all original packaging and accessories</li><li>Include the receipt or proof of purchase<br/></li></ul><h4>How to Initiate a Return</h4><p>To start a return, please contact us at <strong>support@shopowave.com</strong>. Returns must be authorized before sending any items back. Unauthorized returns will not be accepted.</p><p>If your return is approved, we’ll send you a prepaid return shipping label along with instructions on how and where to send your package.</p><h4>Return Shipping Address</h4><p>Please send all authorized returns to:<br/> <strong>Shopowave Returns Center<br/></strong> 3245 Abbot Kinney Blvd, Suite 500<br/> Venice, CA 90291, USA</p><h4>Damages and Issues</h4><p>Please inspect your order immediately upon receipt. If your item is defective, damaged, or incorrect, contact us right away at <strong>support@shopowave.com</strong> so we can resolve the issue promptly.</p><h4>Non-Returnable Items</h4><p>Certain products are not eligible for return, including:</p><ul><li>Perishable goods</li><li>Custom or personalized items</li><li>Opened software, electronics, or accessories</li><li>Items with signs of use or damage not caused by shipping</li><li>Hazardous materials, flammable liquids, or gases</li><li>Items marked as final sale or gift cards<br/></li></ul><p>If you are unsure whether your item is returnable, please reach out to us before placing your order.</p><h4>Exchanges</h4><p>To exchange an item, first complete the return process. Once your return is approved and received, you may place a new order for the desired item.</p><h4>European Union Customers: 14-Day Cooling-Off Period</h4><p>If you are located in the European Union, you have the right to cancel or return your order within 14 days of receipt—no justification required. Items must meet the same eligibility conditions as above.</p><h4>Refund Process</h4><p>Once we receive and inspect your returned item, we will notify you about the approval or rejection of your refund.</p><p>If approved, refunds will be processed to your original payment method within <strong>10 business days</strong>. Please note that it may take additional time for your bank or credit card company to post the refund.</p><p>If you do not receive your refund within <strong>15 business days</strong> after approval, please contact us at <strong>support@shopowave.com</strong>.</p><p>At <strong>Shopowave</strong>, we sell high-quality gadgets, laptops, and electronic devices from trusted global brands. We appreciate your business and look forward to serving you again!</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_7ijV4D"
+          ]
+        }
+      },
+      "block_order": [
+        "group_PMbcUn"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 25,
+        "padding-block-end": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_4BM8FA",
+    "section_LJ8mLm"
+  ]
+}

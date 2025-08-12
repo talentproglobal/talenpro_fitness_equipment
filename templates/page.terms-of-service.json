@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_4BM8FA": {
+      "type": "section",
+      "blocks": {
+        "text_6qYJHJ": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>{{ closest.page.title }}</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_Acdi46": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>These Terms of Service (“Terms”) govern your access to and use of the website</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_6qYJHJ",
+        "text_Acdi46"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 50,
+        "padding-block-end": 50
+      }
+    },
+    "section_LJ8mLm": {
+      "type": "section",
+      "blocks": {
+        "group_PMbcUn": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_overflow": "position_normal",
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 100,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_7ijV4D": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Welcome to <strong>Shopowave</strong>!</p><p>These Terms of Service (“Terms”) govern your access to and use of the website, products, and services provided by Shopowave (“we,” “us,” or “our”). By accessing or using our services, you agree to be bound by these Terms. If you do not agree, please do not use our services.</p><h4>1. Eligibility</h4><p>You must be at least 18 years old or of legal age in your jurisdiction to use our services. By using our services, you represent and warrant that you meet this eligibility requirement.</p><h4>2. Account Registration</h4><p>To purchase from Shopowave, you may be required to create an account. You agree to provide accurate, complete, and up-to-date information. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account.</p><h4>3. Product Information</h4><p>We sell gadgets, laptops, and electronic devices from various third-party brands. We strive to ensure all product descriptions, images, and pricing are accurate, but we do not guarantee that all information is error-free. Colors and features may vary due to manufacturer changes or display settings. We reserve the right to update product details and prices without notice.</p><h4>4. Orders and Payment</h4><ul><li>When you place an order, you offer to purchase the product(s) under these Terms.</li><li>We reserve the right to accept or reject any order.</li><li>Payment must be completed at checkout via accepted payment methods.</li><li>Prices do not include applicable taxes or shipping fees unless explicitly stated.<br/></li></ul><h4>5. Shipping and Delivery</h4><ul><li>Delivery estimates are provided for convenience and are not guaranteed.</li><li>Shopowave is not responsible for delays caused by carriers, customs, or other external factors.</li><li>Risk of loss passes to you once the product is shipped.<br/></li></ul><h4>6. Returns and Refunds</h4><p>Please refer to our <strong>Return and Refund Policy</strong> for details regarding return eligibility, process, and refund timelines.</p><h4>7. Use of the Website</h4><p>You agree to use our website and services only for lawful purposes. You must not:</p><ul><li>Interfere with or disrupt the operation or security of our site</li><li>Use bots, scrapers, or unauthorized means to access the website</li><li>Violate any applicable laws or regulations<br/></li></ul><h4>8. Intellectual Property</h4><p>All content on the Shopowave website, including logos, images, product listings, and written materials, are owned by Shopowave or its licensors and are protected by intellectual property laws. You may not reproduce or use content without express permission.</p><h4>9. Limitation of Liability</h4><p>To the fullest extent permitted by law, Shopowave shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services or products.</p><h4>10. Indemnification</h4><p>You agree to indemnify, defend, and hold harmless Shopowave and its affiliates from any claims, damages, or expenses arising out of your violation of these Terms or misuse of our website or products.</p><h4><strong>11. Privacy</strong></h4><p>Our <strong>Privacy Policy</strong> governs how we collect, use, and protect your personal information. By using our services, you consent to our data practices.</p><h4>12. Changes to Terms</h4><p>We may update these Terms from time to time. Any changes will be posted on our website. Continued use of our services after changes are made constitutes acceptance of the revised Terms.</p><h4>13. Governing Law</h4><p>These Terms shall be governed by and construed in accordance with the laws of the State of California, USA, without regard to its conflict of law principles.</p><h4>14. Contact Us</h4><p>If you have any questions or concerns regarding these Terms, please contact us:</p><p><strong>Shopowave</strong> support@shopowave.com +1 (888) 456-7890 3245 Abbot Kinney Blvd, Suite 500, Venice, CA 90291, USA</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_7ijV4D"
+          ]
+        }
+      },
+      "block_order": [
+        "group_PMbcUn"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 25,
+        "padding-block-end": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_4BM8FA",
+    "section_LJ8mLm"
+  ]
+}

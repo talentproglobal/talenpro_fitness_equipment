@@ -1,0 +1,16 @@
+.button[href], 
+.button-secondary[href], 
+button.shopify-payment-button__button--unbranded[href]{
+    min-width: 160px;
+}
+.menu-list__list-item {
+    margin-right: 15px;
+}
+.header[data-sticky-state=active] {
+    box-shadow: 0 0 20px 8px #00000012 !important;
+}
+.cart__ctas .add-to-cart-button.button-secondary {
+    text-transform: var(--button-text-case-secondary);
+    border-radius: 40px;
+    width: 100%;
+}
