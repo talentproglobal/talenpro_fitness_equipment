@@ -1,0 +1,74 @@
+<li>
+  <a href="{{ block.settings.link }}"> 
+    {{ block.settings.title }} 
+  </a>
+  {% if block.settings.menu_type == "mega_menu" and block.settings.menu != blank %}
+    <div class="mega_menu-{{ section.id }}-{{ block.id }}">
+      <ul>
+        {% for link in block.settings.menu %}
+          <li>{{ link.title | link_to: 'url' }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% elsif block.settings.menu_type == "dropdown_menu" and block.settings.menu != blank %}
+    <ul class="dropdown_menu-{{ section.id }}-{{ block.id }}">
+      {% for link in block.settings.menu.links %}
+        <li>{{ link.title | link_to: 'url' }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</li>
+
+
+
+
+<style>
+  .mega_menu-{{ section.id }}-{{ block.id }}{
+    width: 100%;
+  }
+  .dropdown_menu-{{ section.id }}-{{ block.id }}{
+    width: max-content;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Item",
+    "tag": null,
+    "blocks": [{"type": "text"},{"type": "image"}],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu"
+      },
+      {
+        "type": "select",
+        "id": "menu_type",
+        "label": "Menu Style",
+        "options": [
+          {
+            "value": "dropdown_menu",
+            "label": "Default"
+          },
+          {
+            "value": "mega_menu",
+            "label": "Mega Menu"
+          }
+        ],
+        "default": "dropdown_menu"
+      }
+    ], 
+    "presets": [{"name": "Item"}]
+  }
+{% endschema %}

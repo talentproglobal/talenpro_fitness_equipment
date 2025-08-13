@@ -14,3 +14,17 @@ button.shopify-payment-button__button--unbranded[href]{
     border-radius: 40px;
     width: 100%;
 }
+.mega-menu__link--parent{
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase !important;
+}
+.mega-menu__link--parent:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background: rgb(from var(--color-foreground) r g b /    0.3);
+}

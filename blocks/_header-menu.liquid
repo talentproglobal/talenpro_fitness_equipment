@@ -70,18 +70,21 @@
       {{ block.shopify_attributes }}
       style="--submenu-animation-speed: {{ animation_speed }}ms;{{ title_case_style }}"
     >
-      <div class="header-menu__inner">
-        {%- render 'header-menu' %}
-      </div>
-
-      <script
-        src="{{ 'header-menu.js' | asset_url }}"
-        type="module"
-      ></script>
+      <ul class="hybrid_menu">
+        {% content_for 'blocks' %}
+      </ul>
     </header-menu>
 {% endcase %}
 
 {% stylesheet %}
+  ul.hybrid_menu {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  
   .menu-list--mobile {
     &.menu-list {
       display: grid;
@@ -573,6 +576,7 @@
 {% schema %}
 {
   "name": "t:names.menu",
+  "blocks": [{"type": "_menu_item"}],
   "tag": null,
   "settings": [
     {

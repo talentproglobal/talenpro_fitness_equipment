@@ -660,7 +660,7 @@
                         "vertical_alignment": "center",
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
-                        "vertical_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "flex-start",
                         "gap": 12,
                         "width": "fill",
                         "custom_width": 100,
@@ -687,37 +687,11 @@
                         "padding-inline-end": 50
                       },
                       "blocks": {
-                        "text_qtNpHA": {
-                          "type": "text",
-                          "name": "t:names.text",
-                          "settings": {
-                            "text": "<p>New</p>",
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "custom",
-                            "font": "var(--font-body--family)",
-                            "font_size": "0.875rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": true,
-                            "background_color": "#e58538",
-                            "corner_radius": 5,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 10,
-                            "padding-inline-end": 10
-                          },
-                          "blocks": {}
-                        },
                         "text_TG7mG4": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<h3>Get 20% Discount on<br/>All Gaming Console.</h3>",
+                            "text": "<h3>Home Gym</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -743,7 +717,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>August Sale (Starting Price $100)</p>",
+                            "text": "<p>Underfoot cushioning and forward-thinking technologies.</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -759,33 +733,16 @@
                             "background_color": "#00000026",
                             "corner_radius": 0,
                             "padding-block-start": 0,
-                            "padding-block-end": 15,
+                            "padding-block-end": 10,
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "button_zcq9GL": {
-                          "type": "button",
-                          "name": "t:names.button",
-                          "settings": {
-                            "label": "Shop Now",
-                            "link": "shopify://collections/all",
-                            "open_in_new_tab": false,
-                            "style_class": "button",
-                            "width": "fit-content",
-                            "custom_width": 100,
-                            "width_mobile": "fit-content",
-                            "custom_width_mobile": 100
                           },
                           "blocks": {}
                         }
                       },
                       "block_order": [
-                        "text_qtNpHA",
                         "text_TG7mG4",
-                        "text_QmVXeW",
-                        "button_zcq9GL"
+                        "text_QmVXeW"
                       ]
                     }
                   },
@@ -794,12 +751,12 @@
                     "group_xTA6kP"
                   ]
                 },
-                "single_slider_hUHKEb": {
+                "single_slider_Nndjnw": {
                   "type": "_single_slider",
                   "name": "Single Slider",
                   "settings": {},
                   "blocks": {
-                    "image_N8UXVj": {
+                    "image_kMnGUb": {
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
@@ -822,7 +779,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_3cXkAm": {
+                    "group_bdyNqE": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
@@ -835,7 +792,7 @@
                         "vertical_alignment": "center",
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
-                        "vertical_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "flex-end",
                         "gap": 12,
                         "width": "fill",
                         "custom_width": 100,
@@ -862,37 +819,11 @@
                         "padding-inline-end": 50
                       },
                       "blocks": {
-                        "text_qWqLtG": {
-                          "type": "text",
-                          "name": "t:names.text",
-                          "settings": {
-                            "text": "<p>Sale</p>",
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "custom",
-                            "font": "var(--font-body--family)",
-                            "font_size": "0.875rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": true,
-                            "background_color": "#e58538",
-                            "corner_radius": 5,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 10,
-                            "padding-inline-end": 10
-                          },
-                          "blocks": {}
-                        },
-                        "text_7Mfyej": {
+                        "text_mDP4Ax": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<h3>25% Discount on<br/>Lenovo Laptops.</h3>",
+                            "text": "<h3>Your Fitness</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -914,11 +845,11 @@
                           },
                           "blocks": {}
                         },
-                        "text_iA4p9P": {
+                        "text_QC3NRa": {
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Valid Till August (Starting Price $400)</p>",
+                            "text": "<p>Underfoot cushioning and forward-thinking technologies.</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -934,45 +865,28 @@
                             "background_color": "#00000026",
                             "corner_radius": 0,
                             "padding-block-start": 0,
-                            "padding-block-end": 15,
+                            "padding-block-end": 10,
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "button_kLdRqc": {
-                          "type": "button",
-                          "name": "t:names.button",
-                          "settings": {
-                            "label": "Shop now",
-                            "link": "shopify://collections/all",
-                            "open_in_new_tab": false,
-                            "style_class": "button",
-                            "width": "fit-content",
-                            "custom_width": 100,
-                            "width_mobile": "fit-content",
-                            "custom_width_mobile": 100
                           },
                           "blocks": {}
                         }
                       },
                       "block_order": [
-                        "text_qWqLtG",
-                        "text_7Mfyej",
-                        "text_iA4p9P",
-                        "button_kLdRqc"
+                        "text_mDP4Ax",
+                        "text_QC3NRa"
                       ]
                     }
                   },
                   "block_order": [
-                    "image_N8UXVj",
-                    "group_3cXkAm"
+                    "image_kMnGUb",
+                    "group_bdyNqE"
                   ]
                 }
               },
               "block_order": [
                 "single_slider_ecAtty",
-                "single_slider_hUHKEb"
+                "single_slider_Nndjnw"
               ]
             }
           },
@@ -1064,7 +978,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/S4d51064c303243b08c099770b9ef29129.webp",
+                    "image": "shopify://shop_images/imgi_53_instagram6.jpg",
                     "link": "",
                     "image_ratio": "landscape",
                     "width": "fill",
@@ -1096,7 +1010,7 @@
                     "vertical_alignment": "center",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "flex-end",
                     "gap": 12,
                     "width": "fill",
                     "custom_width": 100,
@@ -1123,37 +1037,11 @@
                     "padding-inline-end": 30
                   },
                   "blocks": {
-                    "text_XkMQgq": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Premium Audio</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-body--family)",
-                        "font_size": "0.875rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": true,
-                        "background_color": "#e58538",
-                        "corner_radius": 5,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 10,
-                        "padding-inline-end": 10
-                      },
-                      "blocks": {}
-                    },
                     "text_DJEDX6": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4>From $99.99</h4>",
+                        "text": "<h4>Burn Fat</h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1179,7 +1067,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>No Compromise With Sound</p>",
+                        "text": "<p>Work every muscle group</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1203,7 +1091,6 @@
                     }
                   },
                   "block_order": [
-                    "text_XkMQgq",
                     "text_DJEDX6",
                     "text_79BJdr"
                   ]
@@ -1258,7 +1145,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/S359fa2e887004015b6faaa0ab56d7eb4P.webp",
+                    "image": "shopify://shop_images/imgi_50_instagram3.jpg",
                     "link": "",
                     "image_ratio": "landscape",
                     "width": "fill",
@@ -1317,37 +1204,11 @@
                     "padding-inline-end": 30
                   },
                   "blocks": {
-                    "text_KYWrEm": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>DSLR Camera</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-body--family)",
-                        "font_size": "0.875rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": true,
-                        "background_color": "#e58538",
-                        "corner_radius": 5,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 10,
-                        "padding-inline-end": 10
-                      },
-                      "blocks": {}
-                    },
                     "text_ifVLef": {
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4>From $399.99</h4>",
+                        "text": "<h4>Hot Deal</h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1373,7 +1234,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Capture Your Moment</p>",
+                        "text": "<p>Don't Miss Today's Featured Deals</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1397,7 +1258,6 @@
                     }
                   },
                   "block_order": [
-                    "text_KYWrEm",
                     "text_ifVLef",
                     "text_YULqgJ"
                   ]
@@ -1455,12 +1315,12 @@
           "type": "_product-list-content",
           "static": true,
           "settings": {
-            "content_direction": "column",
+            "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "fill",
@@ -1488,7 +1348,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Best Selling</h3>",
+                "text": "<h3>Hot Deal</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1509,10 +1369,26 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "button_KdVAwY": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "View More",
+                "link": "shopify://collections/best-seller",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "product_list_text_qLCTNF"
+            "product_list_text_qLCTNF",
+            "button_KdVAwY"
           ]
         },
         "static-product-card": {
@@ -2792,7 +2668,8 @@
       "settings": {
         "collection_list": [
           "best-seller",
-          "new-arrival"
+          "new-arrival",
+          "cardiocore"
         ],
         "layout_type": "grid",
         "carousel_on_mobile": false,

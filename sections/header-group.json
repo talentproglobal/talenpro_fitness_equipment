@@ -54,7 +54,58 @@
             "drawer_accordion_expand_first": false,
             "drawer_dividers": false
           },
-          "blocks": {}
+          "blocks": {
+            "menu_item_chPxcG": {
+              "type": "_menu_item",
+              "name": "Item",
+              "settings": {
+                "title": "Home",
+                "link": "/",
+                "menu": "",
+                "menu_type": "mega_menu"
+              },
+              "blocks": {}
+            },
+            "menu_item_KWkJ7p": {
+              "type": "_menu_item",
+              "name": "Item",
+              "settings": {
+                "title": "Mega Menu",
+                "link": "shopify://collections",
+                "menu": "main-menu",
+                "menu_type": "mega_menu"
+              },
+              "blocks": {}
+            },
+            "menu_item_CGRJr6": {
+              "type": "_menu_item",
+              "name": "Item",
+              "settings": {
+                "title": "Dropdown Menu",
+                "link": "shopify://collections",
+                "menu": "main-menu",
+                "menu_type": "dropdown_menu"
+              },
+              "blocks": {}
+            },
+            "menu_item_89UyCC": {
+              "type": "_menu_item",
+              "name": "Item",
+              "settings": {
+                "title": "Contact Us",
+                "link": "#",
+                "menu": "",
+                "menu_type": "dropdown_menu"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_item_chPxcG",
+            "menu_item_KWkJ7p",
+            "menu_item_CGRJr6",
+            "menu_item_89UyCC"
+          ]
         }
       },
       "settings": {
