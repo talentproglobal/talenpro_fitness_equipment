@@ -1,15 +1,18 @@
-<div class="swiper">
+<div class="swiper {{ block.id }}{{ section.id }}">
   <div class="customSlider-{{ block.id }}{{ section.id }}">
     <div class="swiper-wrapper">
       {% content_for 'blocks' %}
     </div>
+
     {% if block.settings.arrow_design == "navigation" %}
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     {% elsif block.settings.arrow_design == "pagination" %}
       <div class="swiper-pagination"></div>
+    {% elsif block.settings.arrow_design == "scrollbar" %}
+      <div class="swiper-scrollbar"></div>
     {% else %}
-      
+
     {% endif %}
   </div>
 </div>
@@ -22,15 +25,31 @@
   .swiper *:empty{
     display: flex;
   }
-  .swiper {
-    max-width: 1000px;
+  .swiper.{{ block.id }}{{ section.id }}{
+    max-width: {{block.settings.slider_width}}%;
     width: 100%;
     height: 100%;
-    margin:0 auto;
+    margin: 0 auto;
     @media(max-width: 750px){
       aspect-ratio: 8/10;
     }
   }
+  {% if block.settings.arrow_design == "scrollbar" %}
+    .swiper.{{ block.id }}{{ section.id }} {
+      padding-bottom: 15px;
+    }
+    .swiper.{{ block.id }}{{ section.id }} .swiper-scrollbar-drag {
+      background: var(--swiper-scrollbar-drag-bg-color, rgb(237 143 10 / 50%));
+    }
+    .swiper.{{ block.id }}{{ section.id }} .swiper-scrollbar {
+        background: rgb(196 196 196 / 10%);
+    }
+    .swiper.{{ block.id }}{{ section.id }} .swiper-scrollbar.swiper-scrollbar-horizontal {
+      position: absolute;
+      bottom: 0;
+    }
+  {% endif %}
+  
   .customSlider-{{ block.id }}{{ section.id }} .swiper-button-next:after, 
   .customSlider-{{ block.id }}{{ section.id }} .swiper-button-prev:after {
     font-size: 30px;
@@ -60,15 +79,15 @@
   var swiper = new Swiper(".customSlider-{{ block.id }}{{ section.id }}", {
     slidesPerView: 1,
     spaceBetween: 0,      
-    centeredSlides: true,
+    centeredSlides: false,
     speed: 1500,
-    loop: true,
+    loop: false,
     grabCursor: true,
     effect: "slide",
-    autoplay: {
+    {% comment %} autoplay: {
       delay: 2500,
       disableOnInteraction: false,
-    },
+    }, {% endcomment %}
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -77,18 +96,22 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
+    },
     breakpoints: {
       640: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: {{ block.settings.mobile_item }},
+        spaceBetween: 20,
       },
       768: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: {{ block.settings.desktop_item }},
+        spaceBetween: 20,
       },
     },
   });
@@ -116,8 +139,86 @@
           {
             "value": "pagination",
             "label": "Pagination"
+          },
+          {
+            "value": "scrollbar",
+            "label": "Scrollbar"
           }
         ]
+      },
+      {
+        "type": "select",
+        "id": "desktop_item",
+        "label": "Desktop Item",
+        "default": "1",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "mobile_item",
+        "label": "Mobile Item",
+        "default": "1",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "slider_width",
+        "label": "Slider Width",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 100
       }
     ],
     "blocks": [{"type": "_single_slider"}],

@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/tpdrops-logo.png",
-    "logo_inverse": "shopify://shop_images/tpdrops-logo.png",
-    "favicon": "shopify://shop_images/tpdrops-logo.png",
+    "logo": "shopify://shop_images/w-logo.webp",
+    "logo_inverse": "shopify://shop_images/b-logo.webp",
+    "favicon": "shopify://shop_images/fab.webp",
     "type_body_font": "jost_n4",
     "type_subheading_font": "jost_n5",
     "type_heading_font": "jost_n7",
@@ -84,12 +84,13 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 0,
     "variant_button_width": "default-width-buttons",
+    "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#ffffff",
-          "foreground_heading": "#0e0e0e",
-          "foreground": "#464646",
+          "background": "#161616",
+          "foreground_heading": "#ffffff",
+          "foreground": "#ffffff",
           "primary": "#e58538",
           "primary_hover": "#ffa000",
           "border": "#f1f1f1",
@@ -106,12 +107,12 @@
           "secondary_button_hover_background": "#ffa000",
           "secondary_button_hover_text": "#ffffff",
           "secondary_button_hover_border": "#ffa000",
-          "input_background": "#ffffff",
-          "input_text_color": "#0e0e0e",
+          "input_background": "#2d2d2d",
+          "input_text_color": "#ffffff",
           "input_border_color": "#f1f1f1",
           "input_hover_background": "#ffffff",
-          "variant_background_color": "#ffffff",
-          "variant_text_color": "#0e0e0e",
+          "variant_background_color": "#2d2d2d",
+          "variant_text_color": "#ffffff",
           "variant_border_color": "#e58538",
           "variant_hover_background_color": "#ffa000",
           "variant_hover_text_color": "#ffffff",
@@ -243,7 +244,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#333333",
+          "background": "#2d2d2d",
           "foreground_heading": "#ffffff",
           "foreground": "#ffffff",
           "primary": "#ffffff",
@@ -436,8 +437,7 @@
           "selected_variant_hover_border_color": "#ffa000"
         }
       }
-    },
-    "content_for_index": []
+    }
   },
   "presets": {
     "Horizon": {
