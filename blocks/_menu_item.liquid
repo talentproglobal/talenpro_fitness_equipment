@@ -1,41 +1,83 @@
-<li>
-  <a href="{{ block.settings.link }}"> 
+<li class="mega_menu-{{ section.id }}-{{ block.id }} {% if block.settings.menu != blank %}has_dropdown_menu {% endif %}">
+  <a class="parent_item" href="{{ block.settings.link }}"> 
     {{ block.settings.title }} 
+    {% if block.settings.menu.links != blank %}
+      <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
+    {% endif %}
   </a>
-  {% if block.settings.menu_type == "mega_menu" and block.settings.menu != blank %}
-    <div class="mega_menu-{{ section.id }}-{{ block.id }}">
-      <ul>
-        {% for link in block.settings.menu %}
-          <li>{{ link.title | link_to: 'url' }}</li>
-        {% endfor %}
-      </ul>
+  {% capture menu %}
+    {% content_for 'block', id: 'main-menu-area', type: 'menus', menu_style: block.settings.menu_type  %}
+  {% endcapture %}
+
+  {% if block.settings.menu != blank %}
+    <div class="navigation_menu {% if block.settings.menu_type == "mega_menu" %}mega_menu {% elsif block.settings.menu_type == "dropdown_menu"%} dropdown_menu {% endif %}">
+      {{ menu }}
+      {% content_for 'blocks' %}
     </div>
-  {% elsif block.settings.menu_type == "dropdown_menu" and block.settings.menu != blank %}
-    <ul class="dropdown_menu-{{ section.id }}-{{ block.id }}">
-      {% for link in block.settings.menu.links %}
-        <li>{{ link.title | link_to: 'url' }}</li>
-      {% endfor %}
-    </ul>
   {% endif %}
 </li>
 
-
-
-
 <style>
-  .mega_menu-{{ section.id }}-{{ block.id }}{
-    width: 100%;
+  .mega_menu-{{ section.id }}-{{ block.id }} a.parent_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
   }
-  .dropdown_menu-{{ section.id }}-{{ block.id }}{
+  .mega_menu-{{ section.id }}-{{ block.id }} a.parent_item span svg {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+  } 
+  .mega_menu-{{ section.id }}-{{ block.id }} .parent_item{
+    line-height: 40px;
+    align-self: center;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu{
     width: max-content;
+    height: auto;
+    position: absolute;
+    top: 99%;
+    margin: 0;
+    background: var(--color-background);
   }
+  .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu.dropdown_menu ul{
+    min-width: 230px;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu.mega_menu{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    padding: 50px;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu.mega_menu{
+    display: grid !important;
+    grid-template-columns: 65% 33%;
+    align-items: self-start;
+    justify-content: space-around;
+    gap: 2%;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }}:hover .navigation_menu{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  .mega_menu-{{ section.id }}-{{ block.id }} .menu_area{}
+  .mega_menu-{{ section.id }}-{{ block.id }} .promo_image_area{}
 </style>
 
 {% schema %}
   {
     "name": "Item",
     "tag": null,
-    "blocks": [{"type": "text"},{"type": "image"}],
+    "blocks": [{"type": "menus"},{"type": "image"},{"type": "group"}],
     "settings": [
       {
         "type": "text",
@@ -67,6 +109,46 @@
           }
         ],
         "default": "dropdown_menu"
+      },
+      {
+        "type": "select",
+        "id": "section_width",
+        "label": "t:settings.width",
+        "options": [
+          {
+            "value": "page-width",
+            "label": "t:options.page"
+          },
+          {
+            "value": "full-width",
+            "label": "t:options.full"
+          }
+        ],
+        "default": "page-width"
+      },
+      {
+        "type": "header",
+        "content": "t:content.padding"
+      },
+      {
+        "type": "range",
+        "id": "padding-block-start",
+        "label": "t:settings.top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding-block-end",
+        "label": "t:settings.bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
       }
     ], 
     "presets": [{"name": "Item"}]

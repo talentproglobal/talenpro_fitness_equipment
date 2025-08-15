@@ -1,0 +1,351 @@
+
+
+{% liquid assign menu = block.settings.menu %}
+
+{%- doc -%}
+  Renders the facet filtering component
+
+  @param {object} [menu_style] - The filters object
+{%- enddoc -%}
+
+{% if menu.links != blank %}
+  <ul class="parent_link list-unstyled {{ menu_style }}">
+    {% for link in menu.links %}
+      <li class="menu__item {{ block.settings.link_preset }}">
+        <a class="{% if link.active %}active{% endif %} {% if link.links != blank %}title{% endif %}" href="{{ link.url }}">
+          {{ link.title }}
+          {% if link.links != blank and menu_style == "dropdown_menu" %}
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
+          {% endif %}
+        </a>
+        {% if link.links != blank %}
+          <ul class="child_menu list-unstyled">
+            {% for child_link in link.links %}
+              <li class="menu__item {{ block.settings.link_preset }}">
+                <a class="{% if child_link.active %}active{% endif %} {% if child_link.links != blank and menu_style == "dropdown_menu" %}title{% endif %}" href="{{ child_link.url }}">
+                  {{ child_link.title }}
+                  {% if child_link.links != blank and menu_style == "dropdown_menu" %}
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
+                  {% endif %}
+                </a>
+                {% if child_link.links != blank %}
+                  <ul class="{%if menu_style != "dropdown_menu" %}pl15 {% endif %} grandchild_menu list-unstyled">
+                    {% for grandchild_link in child_link.links %}
+                      <li class="menu__item {{ block.settings.link_preset }}">
+                        <a class="{% if grandchild_link.active %}active{% endif %}" href="{{ grandchild_link.url }}">
+                          {{ grandchild_link.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<style>
+  .pl15{
+    padding-left: 15px;
+  }
+  .parent_link a{
+    opacity: 0.8;
+  }
+  .navigation_menu.dropdown_menu .parent_link li a{
+    padding: 7px 15px;
+    display: block;
+    width: 100%;
+  }
+  .navigation_menu .parent_link li a span svg {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    display: none;    
+    transition: all 0.3s;
+  }
+  .navigation_menu.dropdown_menu .parent_link li a span svg {
+    display: block;
+  }
+  .navigation_menu.dropdown_menu .parent_link li a.title {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+  }
+  .navigation_menu.dropdown_menu .parent_link li a.title:hover span svg {
+    transform: rotate(-90deg);
+  }
+  .navigation_menu.dropdown_menu .parent_link li{
+    position: relative;
+    width: 100%;
+  }
+  .navigation_menu.dropdown_menu .parent_link ul{
+    position: absolute;
+    content: '';
+    left: 100%;
+    top: 0;
+    width: max-content;
+    height: auto;
+    background: rgb(var(--color-background));
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .navigation_menu.dropdown_menu .parent_link > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background: var(--color-background);
+  }
+  .navigation_menu.dropdown_menu .parent_link > li > ul > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background: var(--color-background);
+  }
+  .navigation_menu.mega_menu .parent_link {
+    display: grid; 
+    gap: 80px; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    grid-template-columns: repeat(4, 1fr);
+  }
+  ul.parent_link.list-unstyled li a{
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .navigation_menu.mega_menu .parent_link a.title {
+    margin-bottom: 15px;
+    display: block;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  .navigation_menu.mega_menu .parent_link a.title:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 3em;
+    height: 1px;
+    opacity: 0.4;
+    background: var(--button-color);
+  }
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Menus",
+  "tag": null,
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "t:settings.menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "range",
+      "id": "menu_spacing",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_accordion",
+      "label": "t:settings.show_as_accordion",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "accordion_icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "caret",
+          "label": "t:options.caret"
+        },
+        {
+          "value": "plus",
+          "label": "t:options.plus"
+        }
+      ],
+      "default": "caret",
+      "visible_if": "{{ block.settings.show_as_accordion == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "accordion_dividers",
+      "label": "t:settings.dividers",
+      "default": false,
+      "visible_if": "{{ block.settings.show_as_accordion == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_color_scheme",
+      "label": "t:settings.inherit_color_scheme",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1",
+      "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.typography"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "t:settings.heading_preset",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "paragraph",
+          "label": "t:options.paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "t:options.h1"
+        },
+        {
+          "value": "h2",
+          "label": "t:options.h2"
+        },
+        {
+          "value": "h3",
+          "label": "t:options.h3"
+        },
+        {
+          "value": "h4",
+          "label": "t:options.h4"
+        },
+        {
+          "value": "h5",
+          "label": "t:options.h5"
+        },
+        {
+          "value": "h6",
+          "label": "t:options.h6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "select",
+      "id": "link_preset",
+      "label": "t:settings.link_preset",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "paragraph",
+          "label": "t:options.paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "t:options.h1"
+        },
+        {
+          "value": "h2",
+          "label": "t:options.h2"
+        },
+        {
+          "value": "h3",
+          "label": "t:options.h3"
+        },
+        {
+          "value": "h4",
+          "label": "t:options.h4"
+        },
+        {
+          "value": "h5",
+          "label": "t:options.h5"
+        },
+        {
+          "value": "h6",
+          "label": "t:options.h6"
+        }
+      ],
+      "default": "paragraph"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menus",
+      "category": "t:categories.links"
+    }
+  ]
+}
+{% endschema %}
