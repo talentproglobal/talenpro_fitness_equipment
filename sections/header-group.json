@@ -61,8 +61,7 @@
               "settings": {
                 "title": "Home",
                 "link": "/",
-                "menu": "",
-                "menu_type": "mega_menu",
+                "menu_type": "default",
                 "section_width": "page-width",
                 "padding-block-start": 0,
                 "padding-block-end": 0
@@ -72,7 +71,8 @@
                   "type": "menus",
                   "static": true,
                   "settings": {
-                    "menu": "main-menu",
+                    "menu": "",
+                    "menu_style": "default",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -98,7 +98,6 @@
               "settings": {
                 "title": "Shop",
                 "link": "shopify://collections",
-                "menu": "main-menu",
                 "menu_type": "mega_menu",
                 "section_width": "page-width",
                 "padding-block-start": 100,
@@ -202,6 +201,7 @@
                   "static": true,
                   "settings": {
                     "menu": "main-menu",
+                    "menu_style": "default",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -229,8 +229,7 @@
               "settings": {
                 "title": "New Arrival",
                 "link": "shopify://collections/new-arrival",
-                "menu": "",
-                "menu_type": "dropdown_menu",
+                "menu_type": "default",
                 "section_width": "page-width",
                 "padding-block-start": 0,
                 "padding-block-end": 0
@@ -240,7 +239,8 @@
                   "type": "menus",
                   "static": true,
                   "settings": {
-                    "menu": "main-menu",
+                    "menu": "",
+                    "menu_style": "default",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -266,7 +266,6 @@
               "settings": {
                 "title": "Best Products",
                 "link": "shopify://collections/all",
-                "menu": "",
                 "menu_type": "dropdown_menu",
                 "section_width": "page-width",
                 "padding-block-start": 0,
@@ -277,7 +276,8 @@
                   "type": "menus",
                   "static": true,
                   "settings": {
-                    "menu": "main-menu",
+                    "menu": "best-product",
+                    "menu_style": "show_media",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -303,7 +303,6 @@
               "settings": {
                 "title": "Categories",
                 "link": "shopify://collections",
-                "menu": "main-menu",
                 "menu_type": "dropdown_menu",
                 "section_width": "page-width",
                 "padding-block-start": 0,
@@ -315,6 +314,7 @@
                   "static": true,
                   "settings": {
                     "menu": "main-menu",
+                    "menu_style": "default",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -340,8 +340,7 @@
               "settings": {
                 "title": "Contact Us",
                 "link": "#",
-                "menu": "",
-                "menu_type": "dropdown_menu",
+                "menu_type": "default",
                 "section_width": "page-width",
                 "padding-block-start": 0,
                 "padding-block-end": 0
@@ -351,7 +350,8 @@
                   "type": "menus",
                   "static": true,
                   "settings": {
-                    "menu": "main-menu",
+                    "menu": "",
+                    "menu_style": "default",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,

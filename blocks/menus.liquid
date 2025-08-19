@@ -1,20 +1,42 @@
-
-
 {% liquid assign menu = block.settings.menu %}
+{% liquid assign menu_style = block.settings.menu_style %}
 
 {%- doc -%}
   Renders the facet filtering component
 
-  @param {object} [menu_style] - The filters object
+  @param {object} [menu_type] - The menu type
 {%- enddoc -%}
 
 {% if menu.links != blank %}
-  <ul class="parent_link list-unstyled {{ menu_style }}">
+  <ul class="parent_link list-unstyled {{ menu_type }}">
     {% for link in menu.links %}
       <li class="menu__item {{ block.settings.link_preset }}">
         <a class="{% if link.active %}active{% endif %} {% if link.links != blank %}title{% endif %}" href="{{ link.url }}">
+          
+          
+        {% if menu_style == "show_media" %}
+          <span>
+            {% assign current_handle = link.handle %}
+            {% for related_product in collections.all.products %}
+              {% if related_product.handle == current_handle %}
+                <img 
+                  src="{{ related_product.featured_image | img_url: '100x100' }}" 
+                  alt="{{ related_product.title }}" 
+                >
+              {% endif %}
+            {% endfor %}
+            {% for article in blogs['news'].articles %}
+              {% if article.handle == current_handle %}
+                <img 
+                  src="{{ article.image | img_url: '100x100' }}" 
+                  alt="{{ article.title }}" 
+                >
+              {% endif %}
+            {% endfor %}
+            </span>
+          {% endif %}
           {{ link.title }}
-          {% if link.links != blank and menu_style == "dropdown_menu" %}
+          {% if link.links != blank and menu_type == "dropdown_menu" %}
             <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
           {% endif %}
         </a>
@@ -22,14 +44,15 @@
           <ul class="child_menu list-unstyled">
             {% for child_link in link.links %}
               <li class="menu__item {{ block.settings.link_preset }}">
-                <a class="{% if child_link.active %}active{% endif %} {% if child_link.links != blank and menu_style == "dropdown_menu" %}title{% endif %}" href="{{ child_link.url }}">
+                <a class="{% if child_link.active %}active{% endif %} {% if child_link.links != blank and menu_type == "dropdown_menu" %}title{% endif %}" href="{{ child_link.url }}">
+                  {% if menu_style == "show_media" %}<span>T</span>{% endif %}
                   {{ child_link.title }}
-                  {% if child_link.links != blank and menu_style == "dropdown_menu" %}
+                  {% if child_link.links != blank and menu_type == "dropdown_menu" %}
                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
                   {% endif %}
                 </a>
                 {% if child_link.links != blank %}
-                  <ul class="{%if menu_style != "dropdown_menu" %}pl15 {% endif %} grandchild_menu list-unstyled">
+                  <ul class="{%if menu_type != "dropdown_menu" %}pl15 {% endif %} grandchild_menu list-unstyled">
                     {% for grandchild_link in child_link.links %}
                       <li class="menu__item {{ block.settings.link_preset }}">
                         <a class="{% if grandchild_link.active %}active{% endif %}" href="{{ grandchild_link.url }}">
@@ -149,6 +172,22 @@
       "id": "menu",
       "label": "t:settings.menu",
       "default": "main-menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_style",
+      "label": "Menu Thumb",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "show_media",
+          "label": "Media"
+        }
+      ],
+      "default": "default"
     },
     {
       "type": "text",

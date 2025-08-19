@@ -135,7 +135,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_16_h1cl4.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -168,7 +168,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_52_instagram5.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -201,7 +201,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_14_h1cl2.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -234,7 +234,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_49_h1pr2.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -267,7 +267,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_55_instagram1.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -300,7 +300,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_54_instagram7.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -333,7 +333,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/imgi_53_instagram6.jpg",
-                    "link": "",
+                    "link": "#",
                     "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
@@ -355,6 +355,39 @@
               "block_order": [
                 "image_c4xLAe"
               ]
+            },
+            "single_slider_bkjQif": {
+              "type": "_single_slider",
+              "name": "Single Slider",
+              "settings": {},
+              "blocks": {
+                "image_iMp47d": {
+                  "type": "image",
+                  "name": "t:names.image",
+                  "settings": {
+                    "image": "shopify://shop_images/imgi_14_h1cl2.jpg",
+                    "link": "#",
+                    "image_ratio": "portrait",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_iMp47d"
+              ]
             }
           },
           "block_order": [
@@ -364,7 +397,8 @@
             "single_slider_9U8JwH",
             "single_slider_BNckqc",
             "single_slider_wqwAUP",
-            "single_slider_7gET6H"
+            "single_slider_7gET6H",
+            "single_slider_bkjQif"
           ]
         }
       },
@@ -641,7 +675,7 @@
         "collection": "all",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 4,
+        "max_products": 8,
         "columns": 4,
         "mobile_columns": "1",
         "columns_gap": 24,

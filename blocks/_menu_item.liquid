@@ -1,16 +1,16 @@
 <li class="mega_menu-{{ section.id }}-{{ block.id }} {% if block.settings.menu != blank %}has_dropdown_menu {% endif %}">
   <a class="parent_item" href="{{ block.settings.link }}"> 
     {{ block.settings.title }} 
-    {% if block.settings.menu.links != blank %}
+    {% if block.settings.menu_type != "default" %}
       <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
     {% endif %}
   </a>
   {% capture menu %}
-    {% content_for 'block', id: 'main-menu-area', type: 'menus', menu_style: block.settings.menu_type  %}
+    {% content_for 'block', id: 'main-menu-area', type: 'menus', menu_type: block.settings.menu_type  %}
   {% endcapture %}
 
-  {% if block.settings.menu != blank %}
-    <div class="navigation_menu {% if block.settings.menu_type == "mega_menu" %}mega_menu {% elsif block.settings.menu_type == "dropdown_menu"%} dropdown_menu {% endif %}">
+  {% if block.settings.menu_type == "mega_menu" or block.settings.menu_type == "dropdown_menu" %}
+    <div class="navigation_menu {% if block.settings.menu_type == "mega_menu" %}mega_menu {% elsif block.settings.menu_type == "dropdown_menu" %} dropdown_menu {% endif %}">
       {{ menu }}
       {% content_for 'blocks' %}
     </div>
@@ -43,6 +43,7 @@
   }
   .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu.dropdown_menu ul{
     min-width: 230px;
+    max-width: 300px;
   }
   .mega_menu-{{ section.id }}-{{ block.id }} .navigation_menu.mega_menu{
     width: 100%;
@@ -90,25 +91,24 @@
         "label": "Link"
       },
       {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Menu"
-      },
-      {
         "type": "select",
         "id": "menu_type",
-        "label": "Menu Style",
+        "label": "Menu Type",
         "options": [
           {
-            "value": "dropdown_menu",
+            "value": "default",
             "label": "Default"
+          },
+          {
+            "value": "dropdown_menu",
+            "label": "Dropdown Menu"
           },
           {
             "value": "mega_menu",
             "label": "Mega Menu"
           }
         ],
-        "default": "dropdown_menu"
+        "default": "default"
       },
       {
         "type": "select",

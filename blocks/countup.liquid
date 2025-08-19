@@ -1,0 +1,146 @@
+{% if block.settings.countup_number != blank %}
+  <div class="number_countup countup_{{ section.id }}{{ block.id }}">
+    <h2 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
+      <span>{{block.settings.countup_number_before}}</span><span class="countNumber">{{ block.settings.countup_number }}</span><span>{{block.settings.countup_number_after}}</span>
+    </h2>
+  </div>
+{% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".countNumber");
+    const countupContainer = document.querySelector(".number_countup");
+    let counted = false;
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom >= 0;
+    }
+
+    function animateCount(el, target) {
+      let start = 0;
+      let duration = 2000; // 2 seconds
+      let startTime = null;
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const current = Math.min(Math.floor(progress / duration * target), target);
+        el.innerText = current.toLocaleString();
+
+        if (current < target) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    function startCountUp() {
+      if (!counted && isInViewport(countupContainer)) {
+        counters.forEach(counter => {
+          const target = parseInt(counter.innerText.replace(/[^0-9]/g, ""));
+          animateCount(counter, target);
+        });
+        counted = true;
+      }
+    }
+
+    window.addEventListener("scroll", startCountUp);
+    startCountUp(); // In case it's already in view on load
+  });
+</script>
+
+
+{%- style -%}
+  .number_countup.countup_{{ section.id }}{{ block.id }} {
+    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .number_countup.countup_{{ section.id }}{{ block.id }} * {
+    color: rgb(var(--color-foreground));
+  }
+  .number_countup.countup_{{ section.id }}{{ block.id }} h2{
+    margin: 0;
+    font-weight: 600;
+  }
+  @media screen and (min-width: 750px) {
+    .number_countup.countup_{{ section.id }}{{ block.id }} {
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "Number Countup",
+    "tag": null,
+    "settings": [
+      {
+        "type": "text",
+        "id": "countup_number_before",
+        "label": "Before Countup Number"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "countup_number",
+        "label": "Countup Number"
+      },
+      {
+        "type": "text",
+        "id": "countup_number_after",
+        "label": "After Countup Number"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          },
+          {
+            "value": "hxl",
+            "label": "t:sections.all.heading_size.options__4.label"
+          },
+          {
+            "value": "hxxl",
+            "label": "t:sections.all.heading_size.options__5.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings.top",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings.bottom",
+        "default": 10
+      }
+    ],
+    "presets": [{"name": "Number Countup"}]
+  }
+{% endschema %}

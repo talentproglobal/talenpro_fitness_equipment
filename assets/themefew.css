@@ -28,3 +28,19 @@ button.shopify-payment-button__button--unbranded[href]{
     height: 1px;
     background: rgb(from var(--color-foreground) r g b /    0.3);
 }
+
+.custom_badge {
+    position: absolute;
+    width: 150px;
+    right: -50px;
+    top: 10px;
+    background: red;
+    padding: 7px 50px;
+    line-height: 1;
+    transform: rotate(45deg);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

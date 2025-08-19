@@ -28,8 +28,17 @@
         {{ 'content.product_badge_sale' | t }}
       {%- endif -%}
     </div>
-  {%- endif -%}  
+  {%- endif -%}
 </div>
+
+
+{%- if product.metafields.custom.custom_badge != blank -%}
+  <div class="custom_badge">
+    {{product.metafields.custom.custom_badge | metafield_tag}}
+  </div>
+{% endif %}
+
+
 
 {% stylesheet %}
   .product-badges {
