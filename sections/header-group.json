@@ -166,34 +166,10 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "image_FqVJqr": {
-                      "type": "image",
-                      "name": "t:names.image",
-                      "settings": {
-                        "image": "shopify://shop_images/imgi_52_instagram5.jpg",
-                        "link": "",
-                        "image_ratio": "adapt",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "height": "fit",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "image_Dp7TXX",
-                    "image_FqVJqr"
+                    "image_Dp7TXX"
                   ]
                 },
                 "main-menu-area": {
@@ -339,7 +315,7 @@
               "name": "Item",
               "settings": {
                 "title": "Contact Us",
-                "link": "#",
+                "link": "shopify://pages/contact",
                 "menu_type": "default",
                 "section_width": "page-width",
                 "padding-block-start": 0,

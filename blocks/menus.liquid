@@ -10,32 +10,36 @@
 {% if menu.links != blank %}
   <ul class="parent_link list-unstyled {{ menu_type }}">
     {% for link in menu.links %}
-      <li class="menu__item {{ block.settings.link_preset }}">
+      <li class="menu__item {{ block.settings.link_preset }} {{ menu_style }}">
         <a class="{% if link.active %}active{% endif %} {% if link.links != blank %}title{% endif %}" href="{{ link.url }}">
-          
-          
-        {% if menu_style == "show_media" %}
-          <span>
-            {% assign current_handle = link.handle %}
-            {% for related_product in collections.all.products %}
-              {% if related_product.handle == current_handle %}
-                <img 
-                  src="{{ related_product.featured_image | img_url: '100x100' }}" 
-                  alt="{{ related_product.title }}" 
-                >
+
+          {% if menu_style == "show_media" and menu_type == "dropdown_menu" %}
+            <span class="thumb_area">
+              {% assign current_url = link.url %}
+              
+              {% for product in collections.all.products %}
+                {% if product.url == current_url and product.featured_image %}
+                  {{ product.featured_image | image_url: width: 80 | image_tag: alt: product.title }}
+                {% endif %}
+              {% endfor %}
+              
+              {% for article in blogs.news.articles %}
+                {% if article.url == current_url and article.image %}
+                  {{ article.image | image_url: width: 80 | image_tag: alt: article.title }}
+                {% endif %}
+              {% endfor %}
+              
+              {% assign coll = collections[link.handle] %}
+              {% if coll and coll.url == current_url and coll.featured_image %}
+                <img src="{{ coll.featured_image | img_url: '80x' }}" alt="{{ coll.title }}">
               {% endif %}
-            {% endfor %}
-            {% for article in blogs['news'].articles %}
-              {% if article.handle == current_handle %}
-                <img 
-                  src="{{ article.image | img_url: '100x100' }}" 
-                  alt="{{ article.title }}" 
-                >
-              {% endif %}
-            {% endfor %}
+
             </span>
           {% endif %}
-          {{ link.title }}
+
+
+
+          <span>{{ link.title }}</span>
           {% if link.links != blank and menu_type == "dropdown_menu" %}
             <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
           {% endif %}
@@ -45,7 +49,30 @@
             {% for child_link in link.links %}
               <li class="menu__item {{ block.settings.link_preset }}">
                 <a class="{% if child_link.active %}active{% endif %} {% if child_link.links != blank and menu_type == "dropdown_menu" %}title{% endif %}" href="{{ child_link.url }}">
-                  {% if menu_style == "show_media" %}<span>T</span>{% endif %}
+                  {% if menu_style == "show_media" %}
+                    <span class="thumb_area">
+                      {% assign current_url = child_link.url %}
+
+                      {% for product in collections.all.products %}
+                        {% if product.url == current_url and product.featured_image %}
+                          {{ product.featured_image | image_url: width: 80 | image_tag: alt: product.title }}
+                        {% endif %}
+                      {% endfor %}
+
+                      {% for article in blogs.news.articles %}
+                        {% if article.url == current_url and article.image %}
+                          {{ article.image | image_url: width: 80 | image_tag: alt: article.title }}
+                        {% endif %}
+                      {% endfor %}
+
+                      {% assign coll = collections[child_link.handle] %}
+                      {% if coll and coll.url == current_url and coll.featured_image %}
+                        <img src="{{ coll.featured_image | img_url: '80x' }}" alt="{{ coll.title }}">
+                      {% endif %}
+
+                    </span>
+                  {% endif %}
+                  
                   {{ child_link.title }}
                   {% if child_link.links != blank and menu_type == "dropdown_menu" %}
                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none"><path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1"/></svg></span>
@@ -56,6 +83,31 @@
                     {% for grandchild_link in child_link.links %}
                       <li class="menu__item {{ block.settings.link_preset }}">
                         <a class="{% if grandchild_link.active %}active{% endif %}" href="{{ grandchild_link.url }}">
+
+                          {% if menu_style == "show_media" %}
+                            <span class="thumb_area">
+                              {% assign current_url = grandchild_link.url %}
+
+                              {% for product in collections.all.products %}
+                                {% if product.url == current_url and product.featured_image %}
+                                  {{ product.featured_image | image_url: width: 80 | image_tag: alt: product.title }}
+                                {% endif %}
+                              {% endfor %}
+
+                              {% for article in blogs.news.articles %}
+                                {% if article.url == current_url and article.image %}
+                                  {{ article.image | image_url: width: 80 | image_tag: alt: article.title }}
+                                {% endif %}
+                              {% endfor %}
+
+                              {% assign coll = collections[grandchild_link.handle] %}
+                              {% if coll and coll.url == current_url and coll.featured_image %}
+                                <img src="{{ coll.featured_image | img_url: '80x' }}" alt="{{ coll.title }}">
+                              {% endif %}
+
+                            </span>
+                          {% endif %}    
+
                           {{ grandchild_link.title }}
                         </a>
                       </li>
@@ -131,12 +183,13 @@
     background: var(--color-background);
   }
   .navigation_menu.mega_menu .parent_link {
-    display: grid; 
-    gap: 80px; 
-    flex-direction: row;
-    flex-wrap: wrap; 
-    grid-template-columns: repeat(4, 1fr);
+      display: grid;
+      gap: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      grid-template-columns: repeat(4, 1fr);
   }
+
   ul.parent_link.list-unstyled li a{
     line-height: 28px;
     font-size: 14px;
@@ -158,6 +211,19 @@
     opacity: 0.4;
     background: var(--button-color);
   }
+  li.menu__item.paragraph.show_media a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  li.menu__item.paragraph.show_media a .thumb_area {    
+    border: 1px solid rgb(from var(--color-foreground) r g b /    0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
 </style>
 
 

@@ -1,10 +1,19 @@
 {% if block.settings.countup_number != blank %}
   <div class="number_countup countup_{{ section.id }}{{ block.id }}">
     <h2 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
-      <span>{{block.settings.countup_number_before}}</span><span class="countNumber">{{ block.settings.countup_number }}</span><span>{{block.settings.countup_number_after}}</span>
+      <span>{{ block.settings.countup_number_before }}</span>
+
+      {% if request.design_mode %}
+        <span class="countNumber">{{ block.settings.countup_number | default: '0,000' }}</span>
+      {% else %}
+        <span class="countNumber" data-count="{{ block.settings.countup_number }}">{{ block.settings.countup_number | default: '0,000' }}</span>
+      {% endif %}
+
+      <span>{{ block.settings.countup_number_after | default: '%' }}</span>
     </h2>
   </div>
 {% endif %}
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -74,7 +83,7 @@
 
 {% schema %}
   {
-    "name": "Number Countup",
+    "name": "Countup",
     "tag": null,
     "settings": [
       {
@@ -98,27 +107,27 @@
         "options": [
           {
             "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
+            "label": "h2"
           },
           {
             "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
+            "label": "h1"
           },
           {
             "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
+            "label": "h0"
           },
           {
             "value": "hxl",
-            "label": "t:sections.all.heading_size.options__4.label"
+            "label": "hxl"
           },
           {
             "value": "hxxl",
-            "label": "t:sections.all.heading_size.options__5.label"
+            "label": "hxxl"
           }
         ],
         "default": "h1",
-        "label": "t:sections.all.heading_size.label"
+        "label": "Header Size"
       },
       {
         "type": "range",
@@ -141,6 +150,11 @@
         "default": 10
       }
     ],
-    "presets": [{"name": "Number Countup"}]
+    "presets": [
+        {
+            "name": "Countup",
+            "category": "Count",
+        }
+    ]
   }
 {% endschema %}
