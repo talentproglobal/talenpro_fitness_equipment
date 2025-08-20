@@ -78,6 +78,8 @@
           class="menu-drawer__menu has-submenu"
           role="list"
         >
+
+          
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
           {%- endcomment -%}
@@ -525,6 +527,9 @@
               </li>
             {%- endfor -%}
           {% endif %}
+
+
+
         </ul>
       </nav>
       <div
@@ -600,7 +605,6 @@
   .header__icon--menu {
     position: initial;
   }
-
   @media screen and (min-width: 750px) {
     .header--desktop header-menu + .header__drawer header-drawer {
       display: none;
@@ -1062,7 +1066,11 @@
   .menu-drawer__featured-collection-link::before {
     border-radius: var(--menu-image-border-radius);
   }
-
+  @media (max-width: 1024px){
+    li.menu-drawer__list-item * {
+        font-size: 12px;
+    }
+  }
   @keyframes menu-drawer-nav-open {
     0% {
       visibility: hidden;
